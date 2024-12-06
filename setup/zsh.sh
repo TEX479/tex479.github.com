@@ -10,11 +10,16 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # configure omz with my custom config
 mkdir ~/.oh-my-zsh/custom/
 echo "cloning custom.tar to  \$ZSH/custom"
-curl -fsSL https://tex479.github.io/setup/zsh/custom.tar > ~/.oh-my-zsh/custom/
+curl -fsSL https://tex479.github.io/setup/zsh/custom.tar > ~/.oh-my-zsh/custom/custom.tar
 tar -xf ~/.oh-my-zsh/custom/custom.tar -C ~/.oh-my-zsh/custom/
 rm ~/.oh-my-zsh/custom/custom.tar
 
 echo "cloning .zshrc"
 curl -fsSL https://tex479.github.io/setup/zsh/.zshrc > ~/.zshrc
 
-echo "done"
+if ! [ -x fzf ]; then
+    sudo apt install fzf
+fi
+if ! [ -x zoxide ]; then
+    sudo apt install zoxide
+fi
