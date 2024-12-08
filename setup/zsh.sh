@@ -1,5 +1,10 @@
 
 # install zsh if it is not installed already
+if ! [ -x git ]; then
+    sudo apt install git
+fi
+
+# install zsh if it is not installed already
 if ! [ -x zsh ]; then
     sudo apt install zsh
 fi
