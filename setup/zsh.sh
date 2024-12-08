@@ -9,6 +9,9 @@ if ! [ -x zsh ]; then
     sudo apt install zsh
 fi
 
+sudo apt-get install fonts-powerline
+# curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
+
 # setup OhMyZsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -28,3 +31,4 @@ fi
 if ! [ -x zoxide ]; then
     sudo apt install zoxide
 fi
+sudo apt install command-not-found
