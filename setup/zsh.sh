@@ -1,18 +1,12 @@
 
-# install zsh if it is not installed already
-if ! [ -x git ]; then
-    sudo apt install git
-fi
+sudo apt-get update
+# install dependencies if it is not installed already
+sudo apt-get install git zsh fonts-powerline fzf zoxide command-not-found
 
-# install zsh if it is not installed already
-if ! [ -x zsh ]; then
-    sudo apt install zsh
-fi
-
-sudo apt-get install fonts-powerline
 # curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
 
 # setup OhMyZsh
+export RUNZSH="no"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # configure omz with my custom config
@@ -25,10 +19,3 @@ rm ~/.oh-my-zsh/custom/custom.tar
 echo "cloning .zshrc"
 curl -fsSL https://tex479.github.io/setup/zsh/.zshrc > ~/.zshrc
 
-if ! [ -x fzf ]; then
-    sudo apt install fzf
-fi
-if ! [ -x zoxide ]; then
-    sudo apt install zoxide
-fi
-sudo apt install command-not-found

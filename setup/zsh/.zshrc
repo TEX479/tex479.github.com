@@ -70,7 +70,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(z zoxide vscode virtualenv zsh-interactive-cd fzf python ssh ubuntu urltools web-search zsh-autosuggestions zsh-syntax-highlighting rust command-not-found)
+plugins=(z zoxide vscode virtualenv zsh-interactive-cd fzf python ssh ubuntu urltools zsh-autosuggestions zsh-syntax-highlighting rust command-not-found py-venv-activate)
 
 source $ZSH/oh-my-zsh.sh
 
