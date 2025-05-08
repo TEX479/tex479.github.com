@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -106,4 +106,20 @@ export EDITOR="nano"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# options for "man" command to use "bat" (or "batcat")
+if [ -x $HOME/.local/bin/bat ]; then
+	export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+	export MANROFFOPT="-c"
+elif [ -x /usr/bin/batcat ]; then
+	export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+	export MANROFFOPT="-c"
+fi
+
+# bun completions
+[ -s "/home/tex/.bun/_bun" ] && source "/home/tex/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
