@@ -89,7 +89,7 @@ source $ZSH/oh-my-zsh.sh
 # fi
 
 # line added by me (tex) cuz I don't know vim
-export EDITOR="nano"
+export EDITOR="nvim"
 
 
 # Compilation flags
